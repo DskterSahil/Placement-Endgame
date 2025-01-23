@@ -11,34 +11,32 @@ body {
     height: 100vh;
 }
 
-main{
+main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;   
+    align-items: center;
 }
 
-header{
-    text-align: center;   
+header {
+    text-align: center;
 }
 
-header p{
+header p {
     max-width: 350px;
     color: #8E8E8E;
     margin-top: 10px;
     line-height: 18.24px;
-    
 }
 
-header h1{
+header h1 {
     color: #F9F4DA;
     font-weight: 500;
     font-size: 1.5rem;
     margin-bottom: 0;
 }
 
-section.game-status{
-   
+section.game-status {
     width: 100%;
     height: 60px;
     max-width: 350px;
@@ -48,16 +46,15 @@ section.game-status{
     margin-bottom: 30px;
 }
 
-section.game-status h2{
+section.game-status h2 {
     margin-top: 8px;
     font-size: 1.25rem;
     margin-bottom: 0;
 }
 
-section.game-status p{
+section.game-status p {
     margin-top: 6px;
 }
-
 
 section.game-status.won {
     background-color: #10A95B;
@@ -79,10 +76,10 @@ section.game-status > p.farewell-message {
 
 section.game-status > h2 {
     font-size: 1.25rem;
-    margin: 5px
+    margin: 5px;
 }
 
-span.comp-icon{
+span.comp-icon {
     border-radius: 3px;
     font-weight: 700;
     font-size: 0.75rem;
@@ -103,7 +100,8 @@ span.comp-icon.lost::before {
     left: 0;
     background-color: rgba(0, 0, 0, 0.7);
 }
-section.companies-container{
+
+section.companies-container {
     display: flex;
     gap: 5px;
     max-width: 350px;
@@ -112,8 +110,8 @@ section.companies-container{
     justify-content: center;
 }
 
-span.word{
-     height: 40px;
+span.word {
+    height: 40px;
     width: 40px;
     background-color: #323232;
     display: flex;
@@ -127,15 +125,14 @@ section.word-container > span.missed-letter {
     color: #EC5D49;
 }
 
-section.word-container{
+section.word-container {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 2px;
 }
 
-
-button.key{
+button.key {
     color: #1e1e1e;
     width: 40px;
     font-size: 1rem;
@@ -148,15 +145,15 @@ button.key{
     cursor: pointer;
 }
 
-.key.green{
+.key.green {
     background-color: #10A95B;
 }
 
-.key.red{
+.key.red {
     background-color: red;
 }
 
-section.keyboard-container{
+section.keyboard-container {
     margin-top: 40px;
     display: flex;
     flex-wrap: wrap;
@@ -169,21 +166,97 @@ section.keyboard-container{
 
 section.keyboard-container > button:disabled {
     cursor: not-allowed;
-    opacity: 0.5
+    opacity: 0.5;
 }
 
-section.new-game-btn{
+section.new-game-btn {
     margin-top: 20px;
-    
 }
 
-.new-game-btn button{
+.new-game-btn button {
     background-color: #11B5E5;
-    border: 1px solid  #D7D7D7;
+    border: 1px solid #D7D7D7;
     padding: 10px 0;
     border-radius: 4px;
     color: #1E1E1E;
     width: 220px;
     margin-bottom: 30px;
-    
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 1.2rem;
+    }
+
+    section.game-status {
+        max-width: 90%;
+    }
+
+    section.game-status h2 {
+        font-size: 1rem;
+    }
+
+    span.word {
+        height: 35px;
+        width: 35px;
+        font-size: 1rem;
+    }
+
+    section.keyboard-container {
+        padding: 15px;
+        max-width: 100%;
+    }
+
+    button.key {
+        width: 35px;
+        font-size: 0.9rem;
+        padding: 5px;
+    }
+
+    section.companies-container {
+        max-width: 100%;
+    }
+
+    section.new-game-btn button {
+        width: 180px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 5px;
+    }
+
+    header h1 {
+        font-size: 1rem;
+    }
+
+    section.game-status {
+        max-width: 100%;
+    }
+
+    span.word {
+        height: 30px;
+        width: 30px;
+        font-size: 0.875rem;
+    }
+
+    button.key {
+        width: 30px;
+        font-size: 0.8rem;
+        padding: 4px;
+    }
+
+    section.keyboard-container {
+        gap: 4px;
+    }
+
+    section.new-game-btn button {
+        width: 150px;
+    }
 }
