@@ -134,34 +134,39 @@ export default function App(){
     return(
         
         <main>
-        
-            <header >
-                <h1>Placement: Endgame</h1>
-                <p>Guess the word in under 8 attempts to keep the your seat in desired company safe from being taken!</p>
-            </header>
+            <div className="stars"></div>
+            <div className="twinkling"></div>
+
+            <section className="everythin-container">
+
+                <header >
+                    <h1>Placement: Endgame</h1>
+                    <p>Guess the word in under 8 attempts to keep the your seat in desired company safe from being taken!</p>
+                </header>
+                
+                <section className={gameStatusClass}>
+                    {renderGameStatus()}
+                </section>
             
-            <section className={gameStatusClass}>
-                {renderGameStatus()}
+                <section className="companies-container">
+                    {companiesArrElements}
+                </section>
+                
+                <section className="word-container">
+                    {wordEle}
+                </section>
+                
+                <section className="keyboard-container">
+                    {keyboardELe}
+                </section>
+                
+                {isGameOver && 
+                <section className="new-game-btn">
+                    <button
+                    onClick={startNewGame}
+                    >New Game</button>
+                </section>}
             </section>
-        
-            <section className="companies-container">
-                {companiesArrElements}
-            </section>
-            
-            <section className="word-container">
-                {wordEle}
-            </section>
-            
-            <section className="keyboard-container">
-                {keyboardELe}
-            </section>
-            
-            {isGameOver && 
-            <section className="new-game-btn">
-                <button
-                onClick={startNewGame}
-                >New Game</button>
-            </section>}
             
         </main>
     )
